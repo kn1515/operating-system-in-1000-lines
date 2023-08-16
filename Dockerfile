@@ -38,12 +38,5 @@ RUN mkdir -p work && \
     cd work && \
     curl -LO https://github.com/qemu/qemu/raw/v8.0.4/pc-bios/opensbi-riscv32-generic-fw_dynamic.bin
 
-RUN curl https://sh.rustup.rs -sSf | sh && \
-    source "$HOME/.cargo/env" && \
-    rustup default nightly && \
-    rustup target add riscv32i-unknown-none-elf && \
-    cargo install cargo-binutils && \
-    rustup component add llvm-tools-preview
-
 WORKDIR /work
 

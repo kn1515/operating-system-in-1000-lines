@@ -4,6 +4,6 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - .:/work
+      - ./src:/work
     tty: true
 
